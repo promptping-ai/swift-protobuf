@@ -1,7 +1,30 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git submodule:*)"
+      "Bash(git submodule:*)",
+      "WebSearch",
+      "Skill(plugin-dev:skill-development)",
+      "Bash(~/.swiftly/bin/swiftly list-available:*)",
+      "Bash(bash)",
+      "Bash(PATH=\"/opt/homebrew/opt/util-linux/bin:/usr/bin:/bin:/usr/local/bin:$PATH\" /bin/bash -c 'curl -L https://swiftlang.github.io/swiftly/swiftly-install.sh | bash')",
+      "Bash(~/.swiftly/bin/swiftly list:*)",
+      "Bash(~/.swiftly/bin/swift:*)",
+      "Bash(source:*)",
+      "Bash(swiftly list-available:*)",
+      "Bash(swiftly --help:*)",
+      "Bash(swiftly self-update)",
+      "WebFetch(domain:www.swift.org)",
+      "WebFetch(domain:github.com)",
+      "Bash(python3:*)",
+      "Bash(pip3 install:*)",
+      "Bash(brew install:*)",
+      "Bash(pipx ensurepath:*)",
+      "Bash(pipx install:*)",
+      "Bash(youtube_transcript_api:*)",
+      "Bash(fold:*)",
+      "Bash(git ls-tree:*)",
+      "Bash(ln:*)"
     ]
-  }
+  },
+  "outputStyle": "Learning"
 }

@@ -25,3 +25,5 @@ succeeding_tests.txt
 
 PluginExamples/.build
 PluginExamples/.swiftpm/
+
+.claude/*.local.json
