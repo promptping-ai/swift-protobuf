@@ -10,8 +10,6 @@ permissions:
   contents: read
 
 on:
-  push:
-    branches: [ main ]
   pull_request:
     branches: [ main ]
   # Every Sunday at 5am to get warning on any new conformance tests upstream.
