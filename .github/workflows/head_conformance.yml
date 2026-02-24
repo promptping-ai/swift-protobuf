@@ -22,7 +22,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     container:
       # Unlike build.yml we only worry about the conformance test with the
       # latest Swift release.

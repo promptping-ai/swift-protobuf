@@ -11,7 +11,7 @@ on:
 
 jobs:
   core:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     strategy:
       fail-fast: false
       matrix:
@@ -55,7 +55,7 @@ jobs:
     name: Api Breakage Compared to main branch
     # Only on pull requests
     if: github.event_name == 'pull_request'
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     container:
       # Test on the latest Swift release. This could run on all the support
       # Swift versions, but that doesn't seem worth it until there are Swift
@@ -77,7 +77,7 @@ jobs:
     name: swift-format Check
     # Only on pull requests
     if: github.event_name == 'pull_request'
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     container:
       # Use use the latest Swift release and that's the version of swift-format
       # people should use.
@@ -101,7 +101,7 @@ jobs:
         git ls-files -z '*.swift' | xargs -0 swift format lint --strict --parallel
 
   sanitizer_testing:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     strategy:
       fail-fast: false
       matrix:
@@ -133,7 +133,7 @@ jobs:
         swift test -c ${{ matrix.swiftpm_config }} --sanitize=${{ matrix.sanitizer }}
 
   fuzzing_regressions:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     strategy:
       fail-fast: false
       matrix:
